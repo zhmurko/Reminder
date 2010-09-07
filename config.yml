@@ -1,0 +1,21 @@
+svn:
+ url: "https://server.local/svn/"
+ branch:
+  current: "projects/test"
+  production_mirror: "projects/production"
+
+smtp:
+ host: 192.168.0.2
+ port: 25
+ login: admin@server.local
+ password: secret
+ from:  svn_reminder@server.local
+ cc: teamleader@server.local
+
+database:
+ adapter: mysql
+ database: bugzilla
+ username: bugzilla
+ password: secret
+ host: localhost
+ port: 3306

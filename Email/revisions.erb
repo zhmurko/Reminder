@@ -1,0 +1,17 @@
+From: <%= @from %>
+To: <%= @to %>
+Cc: <%= @cc %>
+Subject: <%= @subject %>
+
+Hello!
+
+Revisions listed below were committed to SVN/projects/<%= @branch_name %> but are absent in the appropriate bugs in Bugzilla.
+Please check:
+
+revision |     date time      |   comment
+----------------------------------------
+<%= @table_body %>
+
+Regards,
+SVN Reminder
+

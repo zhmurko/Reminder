@@ -1,0 +1,30 @@
+
+require 'rubygems'
+require 'rake'
+require 'active_record'
+require 'active_support'
+require 'net/smtp'
+require 'erb'
+
+%w{ Bugzilla SVN  Email }.each do | folder |
+	FileList["#{folder}/*.rb"].sort.each do | filename |
+		require filename
+	end
+end
+
+require "SVN/svn.rb"
+
+require "Email/email.rb"
+
+# Add your own tasks in files ending in .rake,
+
+FileList['*.rake'].each do |rake_file|
+ import rake_file
+end
+
+  task :default => [:hello_world]
+
+  task :hello_world do
+   puts "hello world"
+  end
+
